@@ -3,18 +3,22 @@
 #include <string.h>
 
 
-char	*ft_strlcpy(char *dest, char *src, size_t n)
+size_t	*ft_strlcpy(char *dest, char *src, size_t n)
 {
-	size_t	t;
-	int	i;
+	size_t	src_return;
+	size_t	i;
 
 	i = 0;
-	t = 0;
-	while (t < n - 1)
+	src_return = 0;
+	if (n <= 0)
+		return (0);
+	if (!src || !dest)
+		return (0);
+	src_return = ft_strlen(src);
+	while (i < (n - 1))
 	{
 		dest[i] = src[i];
 		i++;
-		t++;
 	}
 	dest[i] = '\0';
 	return (dest);
@@ -24,6 +28,6 @@ int	main(void)
 {
 	char	dest[60];
 
-	ft_strlcpy(dest, "eraumavez", 4);
+	strlcpy(dest, "eraumavez", 4);
 	printf("%s\n", dest);
 }

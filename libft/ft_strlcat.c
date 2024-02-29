@@ -18,8 +18,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	size_t	src_len;
 	size_t	i;
 
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
+	dest_len = 3; //ft_strlen(dest);
+	src_len = 3; //ft_strlen(src);
 	i = 0;
 
 	if (!src && !dest)
@@ -28,5 +28,18 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	if (!src)
 		return (dest_len);
 	while (i < n)
-		
+	{
+		dest[dest_len] = src[i];
+		i++;
+		dest_len++;
+	}
+	dest[dest_len] = '\0';
+	return (dest_len - i);
+}
+
+int	main(void)
+{
+	char	dest[3] = "era";
+	printf("%ld\n", ft_strlcat(dest, "uma", 3));
+	printf("%s\n", dest);
 }

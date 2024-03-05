@@ -9,8 +9,7 @@ Also note that strlcpy() and strlcat() only operate on true ''C'' strings.
 This means that for strlcpy() src must be NUL-terminated and for strlcat() both src and dst must be NUL-terminated.
 */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
@@ -18,8 +17,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	size_t	src_len;
 	size_t	i;
 
-	dest_len = 3; //ft_strlen(dest);
-	src_len = 3; //ft_strlen(src);
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
 	i = 0;
 
 	if (!src && !dest)

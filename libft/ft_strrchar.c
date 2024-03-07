@@ -24,6 +24,6 @@ char	*ft_strrchr(const char *s, int c)
 int	main(void)
 {
 	char	s[5] = "abcab";
-	printf("%s\n", ft_strrchr(s, 'a'));
-	//printf("%s\n", strrchr(s, 'i'));
+	//printf("%s\n", ft_strrchr(s, 'i'));
+	printf("%s\n", strrchr(s, 'i'));
 }

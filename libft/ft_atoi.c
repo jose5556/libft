@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -32,6 +31,6 @@ int	ft_atoi(const char *nptr)
 
 int	main(void)
 {
-	ft_atoi("  	a-1234ppp");
-	printf("%d\n", atoi("       a-1234ppp"));
+	ft_atoi("  	-1234ppp");
+	printf("%d\n", atoi("       -1234ppp"));
 }

@@ -48,8 +48,8 @@ char    *ft_strnstr(const char *big, const char *little, size_t len);
 
 int	ft_atoi(const char *nptr);
 
-//void *calloc(size_t nmemb, size_t size);
+void	*calloc(size_t nmemb, size_t size);
 
-//char *strdup(const char *s);
+char	*strdup(const char *s);
 
 #endif

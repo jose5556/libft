@@ -14,14 +14,22 @@ void	*ft_calloc(size_t nmemb, size_t size)
 int	main(void)
 {
 	int	i;
-	char	*str = (char*) ft_calloc(35, sizeof(char));
-
 	i = 0;
-	while (i < 35 * sizeof(char))
+
+	char	*str = (char*) ft_calloc(3, sizeof(char));
+	char    *strr = (char*) calloc(3, sizeof(char));
+	
+	while (i < 3 * sizeof(char))
 	{
 		str[i] = 'a';
 		i++;
 	}
 	printf("%zu", ft_strlen(str));
+	while (i < 3 * sizeof(char))
+        {
+                strr[i] = 'a';
+                i++;
+        }
+	printf("%zu", ft_strlen(strr));
 	return (0);
 }*/

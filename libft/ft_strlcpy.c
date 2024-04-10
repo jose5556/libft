@@ -11,7 +11,7 @@ This means that for strlcpy() src must be NUL-terminated and for strlcat() both 
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t n)
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
 	size_t	src_return;
 	size_t	i;
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dest, char *src, size_t n)
 		return (0);
 	if (!src || !dest)
 		return (0);
-	src_return = 8; //ft_strlen(src);
+	src_return = ft_strlen(src);
 	while (i < (n - 1))
 	{
 		dest[i] = src[i];
@@ -30,11 +30,11 @@ size_t	ft_strlcpy(char *dest, char *src, size_t n)
 	dest[i] = '\0';
 	return (src_return);
 }
-
+/*
 int	main(void)
 {
 	char	dest[60];
 
 	printf("%ld\n", ft_strlcpy(dest, "eraumavez", 4));
 	printf("%s\n", dest);
-}
+}*/

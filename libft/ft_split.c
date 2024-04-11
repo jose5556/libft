@@ -6,7 +6,7 @@
 /*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:11:02 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/11 20:30:45 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/11 22:59:03 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,47 @@
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
+	char	*temporary;
 	int		i;
 	int		j;
+	int		k;
+	int		l;
 
 	i = 0;
 	j = 0;
-	while (s[i] != c)
-		i++;
-	result = (char **) malloc (i * sizeof(char) + 1);
-	if (result[0] == NULL)
-		return (NULL);
-	write(1, "l", 1);
-	ft_strlcpy(result[0], s, i);
+	k = 0;
+	l = 0;
 	while (s[i])
 	{
-		j++;
+		if (s[i] == c)
+			j++;
 		i++;
 	}
-	result[i] =  malloc (j * sizeof(char) + 1);
-	if (result[1] == NULL)
+	result = (char *) malloc(j);
+	if (result == NULL)
 		return (NULL);
-	ft_strlcpy(result[1], s, j);
+	i = 0;
+	j = 0;
+	while (result[k])
+	{
+		while (s[i])
+		{
+			if (s[i] == c)
+			{
+				result = (char **) malloc(j * sizeof(char));
+					while (result[k][l])
+					{
+						temporary = ft_substr(s, , )
+					}
+				j = 0;
+				continue;
+			}
+			j++;
+			i++;
+		}
+	}
+	i = 0;
+	j = 0;
 	return (result);
 } 
 

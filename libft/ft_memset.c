@@ -14,10 +14,11 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char str[9] = "eraumavez";
 	printf("%s\n", ft_memset(str, 'z', 5));
 	//printf("%s\n", memset(str, 'z', 5));
 	return (0);
 }
+ */

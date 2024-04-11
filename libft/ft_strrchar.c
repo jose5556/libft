@@ -19,11 +19,13 @@ char	*ft_strrchr(const char *s, int c)
 		len--;
 		s--;
 	}
+	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	s[5] = "abcab";
 	//printf("%s\n", ft_strrchr(s, 'i'));
 	printf("%s\n", strrchr(s, 'i'));
 }
+ */

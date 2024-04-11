@@ -11,9 +11,10 @@ char *ft_strchr(const char *s, int c)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	s[3] = "era";
 	printf("%s\n", ft_strchr(s, 'r'));
 	printf("%s\n", strchr(s, 'r'));
 }
+ */

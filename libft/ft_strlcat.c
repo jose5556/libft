@@ -13,32 +13,33 @@ This means that for strlcpy() src must be NUL-terminated and for strlcat() both 
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dest_len;
-	size_t	src_len;
+	size_t	dst_len;
+	//size_t	src_len;
 	size_t	i;
 
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	//src_len = ft_strlen(src);
 	i = 0;
 
-	if (!src && !dest)
+	if (!src && !dst)
 		return (0);
 
 	if (!src)
-		return (dest_len);
-	while (i < n)
+		return (dst_len);
+	while (i < size)
 	{
-		dest[dest_len] = src[i];
+		dst[dst_len] = src[i];
 		i++;
-		dest_len++;
+		dst_len++;
 	}
-	dest[dest_len] = '\0';
-	return (dest_len - i);
+	dst[dst_len] = '\0';
+	return (dst_len - i);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	dest[3] = "era";
 	printf("%ld\n", ft_strlcat(dest, "uma", 3));
 	printf("%s\n", dest);
 }
+ */

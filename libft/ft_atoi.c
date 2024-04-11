@@ -25,12 +25,12 @@ int	ft_atoi(const char *nptr)
 		result = result * 10 + (nptr[i] - '0');
 		i++;
 	}
-	printf("%d\n", result * check_value);
 	return (result * check_value);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	ft_atoi("  	-1234ppp");
 	printf("%d\n", atoi("       -1234ppp"));
 }
+ */

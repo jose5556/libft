@@ -36,10 +36,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char big[12] = "era uma vez";
 	char little[4] = "uma";
 
 	printf("%s\n", ft_strnstr(big, little, 7));
 }
+ */

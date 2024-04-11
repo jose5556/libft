@@ -11,9 +11,10 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 		n--;
 	}
+	return (dest);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	*src;
 	char	dest[60];
@@ -21,4 +22,4 @@ int	main(void)
 	src = "eraumavez";
 	ft_memcpy(dest, src, 3);
 	printf("%s\n", dest);
-}
+} */

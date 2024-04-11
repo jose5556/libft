@@ -17,9 +17,10 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 		((char *)dest)[i] = temporary[i];
 		i++;
 	}
+	return (dest);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char    *src;
         char    dest[60];
@@ -28,4 +29,4 @@ int	main(void)
         ft_memmove(dest, src, 3);
 	//memmove(dest, src, 3);
         printf("%s\n", dest);
-}
+} */

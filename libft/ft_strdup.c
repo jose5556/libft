@@ -7,15 +7,15 @@ char	*ft_strdup(const char *s)
 
 	len = ft_strlen(s);
 	new_string = (char*) malloc(len * (sizeof(char)));
-
+	if (new_string == NULL)
+		return (new_string);
 	ft_strlcpy(new_string, s, len);
 
 	return (new_string);
 }
-
+/*
 int	main(void)
 {
 	const	char	str[3] = "ola";
 	printf("%s", ft_strdup(str));
-}
-
+}*/

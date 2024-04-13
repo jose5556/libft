@@ -48,9 +48,11 @@ char	**ft_split(char const *s, char c)
 			result[k] = (char *) malloc(j * sizeof(char) + 1);
 			ft_strlcpy(result[k], s + (i - j + 1), j + 1);
 		}
-		i++;
-		j++;
+		else
+			j++;
+		i++;	
 	}
+	result[++k] = 0;
 	return (result);
 }
 

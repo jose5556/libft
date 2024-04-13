@@ -18,20 +18,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*result;
 
 	i = 0;
-	result = (char*) malloc(len * (sizeof(char)));
-	if (result == NULL)
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (NULL);
+	result = (char*) malloc(len * sizeof(char) + 1);
+	if (!result)
 		return (result);
-	while (i < len)
-	{
-		result[i] = ((char *)s)[start];
-		i++;
-		start++;
-	}
+		ft_strlcpy(result, s + start, len + 1);
 	return (result);
 }
 /*
 int	main(void)
 {
 	char	str[9] = "eraumavez";
-	printf("%s", ft_substr(str, 0, 0));
-}*/
+	printf("%s", ft_substr(str, 3, 3));
+}
+*/

@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	s[50] = "era uma vez"; //i 10 j 3
+	char	s[50] = "era uma vez";
 	char	**result = ft_split(s, ' ');
 	int		i;
 

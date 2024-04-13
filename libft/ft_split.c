@@ -15,7 +15,6 @@
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	char	*temporary;
 	int		i;
 	int		j;
 	int		k;
@@ -38,10 +37,16 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] == c)
 		{
-			*result = (char *) malloc(j * sizeof(char)); //since j is "c", no need to add null space
-			temporary = ft_substr(s, i - j, j);
-			ft_strlcpy(result[k], temporary, ft_strlen(temporary));
+			result[k] = (char *) malloc(j * sizeof(char) + 1);
+			ft_strlcpy(result[k], s + (i - j), j + 1);
+			k++;
 			j = 0;
+		}
+		else if (s[i + 1] == '\0')
+		{
+			j++;
+			result[k] = (char *) malloc(j * sizeof(char) + 1);
+			ft_strlcpy(result[k], s + (i - j + 1), j + 1);
 		}
 		i++;
 		j++;
@@ -51,22 +56,15 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	s[50] = "era uma vez";
-	char	**result;
+	char	s[50] = "era uma vez"; //i 10 j 3
+	char	**result = ft_split(s, ' ');
 	int		i;
-	int		j;
 
 	i = 0;
-	j = 0;
-	result = ft_split(s, ' ');
-	while (result[i])
+    while (result[i]) 
 	{
-		while (result[i][j])
-		{
-			printf("%c", result[i][j]);
-			j++;
-		}
-		j = 0;
-		i++;
-	}
+        printf("%s\n", result[i]);
+        i++;
+    }
+	return (0);
 }

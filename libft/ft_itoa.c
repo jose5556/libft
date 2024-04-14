@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* #include "libft.h"
 
 char	*ft_itoa(int n)
 {
-	/* 
 	char	*result;
 	int		i;
 
@@ -24,5 +23,5 @@ char	*ft_itoa(int n)
 
 int		main(void)
 {
-	ft_itoa(256); */
-}
+	ft_itoa(256);
+} */

@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/14 17:11:52 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/14 17:11:55 by joseoliv         ###   ########.fr       */
+/*   Created: 2024/04/14 18:29:53 by joseoliv          #+#    #+#             */
+/*   Updated: 2024/04/14 18:29:55 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	/* 
-	char	*result;
-	int		i;
-
-	i = (n / 10);
-	printf("%d", i);
-}
-
-int		main(void)
-{
-	ft_itoa(256); */
+    
 }

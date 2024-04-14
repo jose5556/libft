@@ -14,15 +14,15 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
-	int	k;
 	char	*result;
+	int		i;
+	int		j;
+	int		k;
 
 	i = 0;
 	j = 0;
 	k = 0;
-	result = (char*) malloc (ft_strlen(s1) * sizeof(char));
+	result = (char *) malloc (ft_strlen(s1) * sizeof(char));
 	if (result == NULL)
 		return (result);
 	while (s1[i])
@@ -30,14 +30,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (set[j])
 		{
 			if (s1[i] == set[j])
-				break;
+				break ;
 			j++;
 		}
 		if (j < 3)
 		{
 			j = 0;
 			i++;
-			continue;
+			continue ;
 		}
 		result[k] = ((char *)s1)[i];
 		i++;

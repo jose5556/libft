@@ -31,7 +31,7 @@ char	**ft_split(char const *s, char c)
 		i++;
 	}
 	result = (char **) malloc(j * sizeof(char *) + 1);
-	if (result == NULL)
+	if (!result)
 		return (NULL);
 	result = fill_letters(s, c, result, k);
 	return (result);
@@ -52,11 +52,15 @@ char	**fill_letters(char const *s, char c, char **result, int k)
 			ft_strlcpy(result[k], s + (i - j), j + 1);
 			k++;
 			j = 0;
+			if (!result[k])
+				free(result[k]);
 		}
 		else if (s[i + 1] == '\0')
 		{
 			result[k] = (char *) malloc(++j * sizeof(char) + 1);
 			ft_strlcpy(result[k], s + (i - j + 1), j + 1);
+			if (result[k])
+				free(result[k]);
 		}
 		else
 			j++;
@@ -68,8 +72,8 @@ char	**fill_letters(char const *s, char c, char **result, int k)
 /*
 int	main(void)
 {
-	char	s[50] = "era uma vez";
-	char	**result = ft_split(s, ' ');
+	char	s[50] = "kkkkk";
+	char	**result = ft_split(s, 'k');
 	int		i;
 
 	i = 0;

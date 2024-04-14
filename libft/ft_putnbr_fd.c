@@ -27,7 +27,6 @@ void	ft_putnbr_fd(int nb)
 	if (nb > 9)
 		ft_putnbr(nb / 10);
 	ft_putchar_fd(nb % 10 + 48, 1);
-	
 }
 /*
 int	main(void)

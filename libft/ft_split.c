@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+char	**fill_letters(char const *s, char c, char **result, int k);
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -19,9 +21,9 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		k;
 
-	k = 0;
 	i = 0;
 	j = 0;
+	k = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -31,6 +33,15 @@ char	**ft_split(char const *s, char c)
 	result = (char **) malloc(j * sizeof(char *) + 1);
 	if (result == NULL)
 		return (NULL);
+	result = fill_letters(s, c, result, k);
+	return (result);
+}
+
+char	**fill_letters(char const *s, char c, char **result, int k)
+{
+	int	i;
+	int	j;
+
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -44,18 +55,17 @@ char	**ft_split(char const *s, char c)
 		}
 		else if (s[i + 1] == '\0')
 		{
-			j++;
-			result[k] = (char *) malloc(j * sizeof(char) + 1);
+			result[k] = (char *) malloc(++j * sizeof(char) + 1);
 			ft_strlcpy(result[k], s + (i - j + 1), j + 1);
 		}
 		else
 			j++;
-		i++;	
+		i++;
 	}
 	result[++k] = 0;
 	return (result);
 }
-
+/*
 int	main(void)
 {
 	char	s[50] = "era uma vez";
@@ -69,4 +79,4 @@ int	main(void)
         i++;
     }
 	return (0);
-}
+}*/

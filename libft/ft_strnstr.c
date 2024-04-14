@@ -1,9 +1,14 @@
-/*
- * The strnstr() function locates the first	occurrence of the  null-termi-
-       nated  string little in the string big, where not more than len characters are
-       searched.  Characters that appear after	a `\0'	character  are
-       not  searched.
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/14 16:38:22 by joseoliv          #+#    #+#             */
+/*   Updated: 2024/04/14 16:39:02 by joseoliv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 

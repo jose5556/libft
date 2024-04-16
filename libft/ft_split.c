@@ -12,32 +12,52 @@
 
 #include "libft.h"
 
-char	**fill_letters(char const *s, char c, char **result, int k);
+char	**fill_letters(char const *s, char c, char **result);
+int		count_words(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		i;
-	int		j;
-	int		k;
+	int		words;
+
+	words = count_words(s, c);
+	result = (char **) malloc(words * sizeof(char *) + 1);
+	if (!result)
+		return (NULL);
+	result = fill_letters(s, c, result);
+	return (result);
+}
+
+char	**fill_letters(char const *s, char c, char **result)
+{
+	int	i;
+	int	j;
+	int	k;
 
 	i = 0;
 	j = 0;
 	k = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] == c && s[i])
+			i++;
+		while (s[i] != c && s[i])
+		{
 			j++;
-		i++;
+			i++;
+		}
+		if (j > 0)
+		{
+			result[k] = (char *) malloc(j * sizeof(char) + 1);
+			ft_strlcpy(result[k], &s[i - j], j + 1);
+		}
+		j = 0;
+		k++;
 	}
-	result = (char **) malloc(j * sizeof(char *) + 1);
-	if (!result)
-		return (NULL);
-	result = fill_letters(s, c, result, k);
 	return (result);
 }
 
-char	**fill_letters(char const *s, char c, char **result, int k)
+int	count_words(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -46,41 +66,26 @@ char	**fill_letters(char const *s, char c, char **result, int k)
 	j = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-		{
-			result[k] = (char *) malloc(j * sizeof(char) + 1);
-			ft_strlcpy(result[k], s + (i - j), j + 1);
-			k++;
-			j = 0;
-			if (!result[k])
-				free(result[k]);
-		}
-		else if (s[i + 1] == '\0')
-		{
-			result[k] = (char *) malloc(++j * sizeof(char) + 1);
-			ft_strlcpy(result[k], s + (i - j + 1), j + 1);
-			if (result[k])
-				free(result[k]);
-		}
-		else
+		while (s[i] == c && s[i])
+			i++;
+		if (s[i])
 			j++;
-		i++;
+		while (s[i] != c && s[i])
+			i++;
 	}
-	result[++k] = 0;
-	return (result);
+	return (j);
 }
-/*
-int	main(void)
-{
-	char	s[50] = "kkkkk";
-	char	**result = ft_split(s, 'k');
-	int		i;
 
-	i = 0;
-    while (result[i]) 
-	{
-        printf("%s\n", result[i]);
-        i++;
-    }
-	return (0);
+/* int	main(void)
+{
+ 	char **str;
+ 	int	i;
+
+ 	i = 0;
+ 	str = ft_split(" era uma    vez    ", ' ');
+ 	while (str[i])
+ 	{
+ 		printf("%s\n", str[i]);
+ 		i++;
+ 	}
 }*/

@@ -33,3 +33,5 @@ int	main(void)
 	printf("%s", ft_substr(str, 3, 3));
 }
 */
+
+

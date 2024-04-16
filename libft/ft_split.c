@@ -88,4 +88,4 @@ int	count_words(char const *s, char c)
  		printf("%s\n", str[i]);
  		i++;
  	}
-}*/
+} */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:31:05 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/14 16:31:09 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:50:12 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,32 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	char	temporary[n];
+	int		j;
 
-	i = 0;
-	while (i < n)
+	j = (int)n;
+	if (!src && !dest)
+		return (dest);
+	if (ft_strlen(dest) > ft_strlen(src))
 	{
-		temporary[i] = ((char *)src)[i];
-		i++;
+		return (ft_memcpy(dest, src, n));
 	}
-	i = 0;
-	while (temporary[i])
+	else
 	{
-		((char *)dest)[i] = temporary[i];
-		i++;
+		while (j)
+		{
+			j--;
+			((char *)dest)[j] = ((char *)src)[j];
+		}
 	}
 	return (dest);
 }
 
 /* int	main(void)
 {
-	char    *src;
-        char    dest[60];
+	char    src[50];
+    char    dest[] = "eraumavez";
 
-        src = "eraumavez";
-        ft_memmove(dest, src, 3);
-	//memmove(dest, src, 3);
-        printf("%s\n", dest);
+    //ft_memmove(src, src + 2, 3);
+	memmove(src, src + 2, 3);
+    printf("%s\n", dest);
 } */

@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 17:11:52 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/16 22:27:06 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:53:37 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static char	*fill_str_ng(int n, int len, char *result)
 	}
 	return (result);
 }
-int		main(void)
+/* int		main(void)
 {
 	printf("%s", ft_itoa(-2147483648));
-}
+} */

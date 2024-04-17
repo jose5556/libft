@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:38:22 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/17 22:06:42 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:23:45 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
+	if (!big || !little)
+		return (NULL);
 	if (ft_strlen(little) == 0)
 		return (((char *)big));
-	if (len > ft_strlen(big))
-		len = ft_strlen(big);
-	while (len-- > 0)
+	while (len > 0)
 	{
-		while (big[i] == little[j])
+		while (big[i] == little[j] && big[i])
 		{
 			if (little[j + 1] == '\0')
 				return (((char *)big));
@@ -36,6 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		i = 0;
 		j = 0;
+		len--;
 		big++;
 	}
 	return (NULL);

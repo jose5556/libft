@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:32:08 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/14 16:46:31 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/17 19:35:24 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,25 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	int	len;
+
+	len = ft_strlen(s);
 	while (*s)
 	{
 		if (*s == c)
 			return ((char *)s);
 		s++;
 	}
-	return (0);
+	if ((char)c == '\0')
+	{
+		return ((char *)&s[len]);
+	}
+	return (NULL);
 }
 
 /* int	main(void)
 {
-	char	s[3] = "era";
+	char	s[] = "";
 	printf("%s\n", ft_strchr(s, 'r'));
 	printf("%s\n", strchr(s, 'r'));
-}
- */
+} */

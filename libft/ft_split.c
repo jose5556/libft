@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:11:02 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/13 16:46:58 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/17 16:58:19 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	**ft_split(char const *s, char c)
 	int		words;
 
 	words = count_words(s, c);
-	result = (char **) malloc(words * sizeof(char *) + 1);
+	result = (char **) malloc((words + 1) * sizeof(char *) + 1);
 	if (!result)
 		return (NULL);
 	result = fill_letters(s, c, result);
@@ -48,7 +48,7 @@ char	**fill_letters(char const *s, char c, char **result)
 		}
 		if (j > 0)
 		{
-			result[k] = (char *) malloc(j * sizeof(char) + 1);
+			result[k] = (char *) malloc((j + 1) * sizeof(char));
 			ft_strlcpy(result[k], &s[i - j], j + 1);
 		}
 		j = 0;
@@ -82,7 +82,7 @@ int	count_words(char const *s, char c)
  	int	i;
 
  	i = 0;
- 	str = ft_split(" era uma    vez    ", ' ');
+ 	str = ft_split("\0gg\0dd", '\0');
  	while (str[i])
  	{
  		printf("%s\n", str[i]);

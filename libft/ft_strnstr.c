@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:38:22 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/14 16:39:02 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/17 22:06:42 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,33 +19,29 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	if (little[0] == '\0')
+	if (ft_strlen(little) == 0)
 		return (((char *)big));
-	while (len > 0)
+	if (len > ft_strlen(big))
+		len = ft_strlen(big);
+	while (len-- > 0)
 	{
 		while (big[i] == little[j])
 		{
-			i++;
-			j++;
-			len--;
-			if (len == 0)
-				return (NULL);
 			if (little[j + 1] == '\0')
 				return (((char *)big));
+			i++;
+			j++;
+			if (--len == 0)
+				return (NULL);
 		}
 		i = 0;
 		j = 0;
 		big++;
-		len--;
 	}
 	return (NULL);
 }
 
 /* int	main(void)
 {
-	char big[12] = "era uma vez";
-	char little[4] = "uma";
-
-	printf("%s\n", ft_strnstr(big, little, 7));
-}
- */
+	printf("%s\n", ft_strnstr("", "", 0));
+} */

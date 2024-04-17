@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:34:14 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/11 17:56:02 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/16 22:09:52 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (result);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
-	char	s1[4] = "era";
-	char	s2[4] = "vez";
+	char	s1[4] = "";
+	char	s2[4] = "5";
 
 	printf("%s", ft_strjoin(s1, s2));
-}*/
+} */

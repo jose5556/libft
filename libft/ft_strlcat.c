@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:33:20 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/14 16:37:06 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:10:22 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,33 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
+	size_t	i;
+	size_t	j;
 	size_t	dst_len;
 	size_t	src_len;
-	size_t	i;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
+	j = ft_strlen(dst);
 	i = 0;
-	if (!src && !dst)
-		return (0);
-	if (!src)
-		return (dst_len);
-	while (i < size)
+	dst_len = j;
+	src_len = ft_strlen(src);
+	if (dst_len < size - 1 && size > 0)
 	{
-		dst[dst_len] = src[i];
-		i++;
-		dst_len++;
+		while (src[i] && dst_len + i < size - 1)
+		{
+			dst[j] = src[i];
+			j++;
+			i++;
+		}
+		dst[j] = '\0';
 	}
-	dst[dst_len] = '\0';
+	if (dst_len >= size)
+		dst_len = size;
 	return (dst_len + src_len);
 }
 
 /* int	main(void)
 {
-	char	dest[3] = "era";
-	printf("%ld\n", ft_strlcat(dest, "uma", 3));
+	char	dest[50] = "pqrstuvwxyz";
+	printf("%ld\n", ft_strlcat(dest, "abcd", 6));
 	printf("%s\n", dest);
-}
- */
+} */

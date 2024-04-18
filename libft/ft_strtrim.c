@@ -12,44 +12,41 @@
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+/* char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;
 	int		i;
 	int		j;
 	int		k;
 
+	k = 0;
 	i = 0;
 	j = 0;
-	k = 0;
-	result = (char *) malloc (ft_strlen(s1) * sizeof(char));
-	if (result == NULL)
-		return (result);
-	while (s1[i])
+
+	if (ft_strlen(set) == 0)
 	{
-		while (set[j])
-		{
-			if (s1[i] == set[j])
-				break ;
-			j++;
-		}
-		if (j < 3)
+		if (ft_strlen(s1) == 0)
+			return (NULL);
+		result = (char *) malloc(ft_strlen(s1) + sizeof(char) + 1);
+		ft_strlcpy(result, s1, ft_strlen(s1) + 1);
+		return (result);
+	}
+	while (set[j])
+	{
+		if (s1[0] == set[j])
 		{
 			j = 0;
-			i++;
-			continue ;
+			while (s1[i] == set[j])
+			{
+				k++;
+			}
 		}
-		result[k] = ((char *)s1)[i];
-		i++;
-		j = 0;
-		k++;
+		j++;
 	}
-	return (result);
-}
-/*
-int	main(void)
+} */
+
+/* int	main(void)
 {
 	char	s1[50] = "2era 1   21uma ve1z";
-	char	set[50] = "1 2";
-	printf("%s", ft_strtrim(s1, set));
-}*/
+	printf("%s\n", ft_strtrim(s1, ""));
+} */

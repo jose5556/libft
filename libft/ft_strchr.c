@@ -15,13 +15,15 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int	len;
+	int	i;
 
+	i = 0;
 	len = ft_strlen(s);
-	while (*s)
+	while (s[i])
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		if (s[i] == c)
+			return ((char *)s) + i;
+		i++;
 	}
 	if ((char)c == '\0')
 	{
@@ -32,7 +34,7 @@ char	*ft_strchr(const char *s, int c)
 
 /* int	main(void)
 {
-	char	s[] = "";
-	printf("%s\n", ft_strchr(s, 'r'));
-	printf("%s\n", strchr(s, 'r'));
+	char	s[] = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
+	printf("%s\n", ft_strchr(s, '\0'));
+	printf("%s\n", strchr(s, '\0'));
 } */

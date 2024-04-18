@@ -12,8 +12,8 @@
 
 #include "libft.h"
 
-char	**fill_letters(char const *s, char c, char **result);
-int		count_words(char const *s, char c);
+static char	**fill_letters(char const *s, char c, char **result);
+static int		count_words(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -21,14 +21,16 @@ char	**ft_split(char const *s, char c)
 	int		words;
 
 	words = count_words(s, c);
-	result = (char **) malloc((words + 1) * sizeof(char *) + 1);
+	if (!s)
+		return (NULL);
+	result = (char **) malloc((words + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
 	result = fill_letters(s, c, result);
 	return (result);
 }
 
-char	**fill_letters(char const *s, char c, char **result)
+static char	**fill_letters(char const *s, char c, char **result)
 {
 	int	i;
 	int	j;
@@ -54,10 +56,11 @@ char	**fill_letters(char const *s, char c, char **result)
 		j = 0;
 		k++;
 	}
+	result[k] = 0;
 	return (result);
 }
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -82,10 +85,10 @@ int	count_words(char const *s, char c)
  	int	i;
 
  	i = 0;
- 	str = ft_split("\0gg\0dd", '\0');
+ 	str = ft_split("hello !", ' ');
  	while (str[i])
  	{
- 		printf("%s\n", str[i]);
+ 		printf("%s", str[i]);
  		i++;
  	}
 } */

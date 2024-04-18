@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	int	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	while (n)
 	{
 		((char *)dest)[i] = ((char *)src)[i];
@@ -32,6 +34,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	dest[60];
 
 	src = "eraumavez";
-	ft_memcpy(dest, src, 3);
+	ft_memcpy(dest, NULL, 3);
 	printf("%s\n", dest);
 } */

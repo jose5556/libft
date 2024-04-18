@@ -44,5 +44,4 @@ int	ft_atoi(const char *nptr)
 {
 	ft_atoi("  	-1234ppp");
 	printf("%d\n", atoi("       -1234ppp"));
-}
- */
+} */

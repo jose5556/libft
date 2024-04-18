@@ -17,11 +17,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 	size_t	i;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
 	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
-		return (ptr);
+	if (!ptr)
+		return (NULL);
 	i = 0;
 	while (i < nmemb * size)
 	{
@@ -31,24 +29,25 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (ptr);
 }
 
-/* int	main(void)
+/* int		main(void)
 {
 	int	i;
 	i = 0;
 
-	char	*str = (char*) ft_calloc(10, sizeof(char));
-	//char    *strr = (char*) calloc(10, sizeof(char));
+	char	*str = (char*) ft_calloc(0, sizeof(char));
+	char    *strr = (char*) calloc(0, sizeof(char));
 	
 	while (i < 10 * sizeof(char))
 	{
 		str[i] = 'a';
 		i++;
 	}
-	printf("%zu", ft_strlen(str));
-	
-	while (i < 40 * sizeof(char))
+	printf("%zu\n", ft_strlen(str));
+	i = 0;
+	while (i < 10 * sizeof(char))
         {
-                strr[i] = 'a';
-                i++;
+            strr[i] = 'a';
+            i++;
         }
-	printf("%zu", ft_strlen(strr));*/
+	printf("%zu\n", ft_strlen(strr));
+} */

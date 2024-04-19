@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:57:41 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 15:27:57 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 15:47:52 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	s1[50] = "abccba";
 	printf("%s\n", ft_strtrim(s1, "abc"));
-} */
+}*/

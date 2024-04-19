@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchar.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:39:10 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/17 19:50:26 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:27:25 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,21 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	len;
+	int	i;
 
-	len = ft_strlen(s);
-	s += len;
-	while (len >= 0)
+	i = strlen(s);
+	while (i >= 0)
 	{
-		if (*s == c)
-		{
-			return ((char *)s);
-		}
-		len--;
-		s--;
+		if (s[i] == (char)c)
+			return ((char*)(s + i));
+		i--;
 	}
-	return (0);
+	return (NULL);
 }
 
-/* int	main(void)
+int	main(void)
 {
-	char	s[] = "xeraumavezx";
-	printf("%s\n", ft_strrchr(s, 'x'));
-	printf("%s\n", strrchr(s, 'x'));
-} */
+	char	s[] = "eraumavezx";
+	printf("%s\n", ft_strrchr(s, 'e'));
+	printf("%s\n", strrchr(s, 'e'));
+}

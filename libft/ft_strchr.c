@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:32:08 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 14:16:59 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 16:15:42 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if ((char)c == '\0')
-	{
 		return ((char *)&s[len]);
-	}
 	return (NULL);
 }
 

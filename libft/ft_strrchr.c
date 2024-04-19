@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:39:10 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 12:27:25 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 12:27:58 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	s[] = "eraumavezx";
 	printf("%s\n", ft_strrchr(s, 'e'));
 	printf("%s\n", strrchr(s, 'e'));
-}
+} */

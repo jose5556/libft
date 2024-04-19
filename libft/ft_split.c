@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:11:02 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 14:28:02 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 14:37:18 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	int		words;
 
-	if (!s || !(*s))
+	if (!s)
 		return (NULL);
 	words = count_words(s, c);
 	result = (char **) malloc((words + 1) * sizeof(char *));
@@ -51,10 +51,9 @@ static char	**fill_letters(char const *s, char c, char **result)
 		if (j > 0)
 		{
 			result[k] = (char *) malloc((j + 1) * sizeof(char));
-			ft_strlcpy(result[k], &s[i - j], j + 1);
+			ft_strlcpy(result[k++], &s[i - j], j + 1);
 		}
 		j = 0;
-		k++;
 	}
 	result[k] = 0;
 	return (result);

@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:57:41 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 15:47:52 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:32:48 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[j] && ft_strchr(set, s1[j]))
 		--j;
 	result = ft_substr(s1, i, j - i + 1);
-		if (!result)
-		{
-			return (ft_strdup(""));
-		}
+	if (!result)
+	{
+		return (ft_strdup(""));
+	}
 	return (result);
 }
 

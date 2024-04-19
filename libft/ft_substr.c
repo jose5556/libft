@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:55:50 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 15:45:05 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:33:32 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*result;
 	size_t	size;
-	
+
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
@@ -35,5 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	printf("%s", ft_substr("hole", 5, 2));
 } */
-
-

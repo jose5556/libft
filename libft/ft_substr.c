@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joseoliv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 20:55:50 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/14 16:44:27 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 15:45:05 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,25 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*result;
-
+	size_t	size;
+	
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-		return (NULL);
-	result = (char *) malloc(len * sizeof(char) + 1);
+		return (ft_strdup(""));
+	size = ft_strlen(s + start);
+	if (size < len)
+		len = size;
+	result = (char *) malloc((len + 1) * sizeof(char));
 	if (!result)
-		return (result);
+		return (NULL);
 	ft_strlcpy(result, s + start, len + 1);
 	return (result);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
-	char	str[9] = "eraumavez";
-	printf("%s", ft_substr(str, 3, 3));
-}
-*/
+	printf("%s", ft_substr("hole", 5, 2));
+} */
 
 

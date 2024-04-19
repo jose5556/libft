@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:34:14 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/16 22:09:52 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 15:55:01 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	result = (char *) malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char));
+	if (!s1 && !s2)
+		ft_strdup("");
+	result = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (result == NULL)
 		return (result);
 	i = 0;
@@ -36,6 +38,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
+	result[i] = 0;
 	return (result);
 }
 

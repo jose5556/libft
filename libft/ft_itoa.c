@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 17:11:52 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/17 18:53:37 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:25:28 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_itoa(int n)
 	int		len;
 
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		n *= -1;
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 			return (result);
 		result = fill_str_ps(n, len, result);
 	}
-	result[n + 1] = '\0';
+	result[len + 1] = '\0';
 	return (result);
 }
 
@@ -84,5 +84,5 @@ static char	*fill_str_ng(int n, int len, char *result)
 }
 /* int		main(void)
 {
-	printf("%s", ft_itoa(-2147483648));
+	printf("%d", 2147483647);
 } */

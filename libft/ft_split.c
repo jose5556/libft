@@ -6,14 +6,14 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:11:02 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/17 16:58:19 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 14:23:16 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static char	**fill_letters(char const *s, char c, char **result);
-static int		count_words(char const *s, char c);
+static int	count_words(char const *s, char c);
 
 char	**ft_split(char const *s, char c)
 {
@@ -41,9 +41,9 @@ static char	**fill_letters(char const *s, char c, char **result)
 	k = 0;
 	while (s[i])
 	{
-		while (s[i] == c && s[i])
+		while (s[i] && s[i] == c)
 			i++;
-		while (s[i] != c && s[i])
+		while (s[i] && s[i] != c)
 		{
 			j++;
 			i++;
@@ -69,11 +69,11 @@ static int	count_words(char const *s, char c)
 	j = 0;
 	while (s[i])
 	{
-		while (s[i] == c && s[i])
+		while (s[i] && s[i] == c)
 			i++;
 		if (s[i])
 			j++;
-		while (s[i] != c && s[i])
+		while (s[i] && s[i] != c)
 			i++;
 	}
 	return (j);

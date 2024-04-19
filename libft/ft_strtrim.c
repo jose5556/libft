@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:57:41 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 12:31:51 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 14:13:18 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*result;
 	int		i;
 	int		j;
-	int		k;
 
-	k = 0;
+	if (ft_strlen(set) == 0 || ft_strlen(s1) == 0 || !set)
+		return (ft_strdup(s1));
 	i = 0;
-	j = 0;
-	
-	while (s1[i])
-	{
-		while (s1)
-	}
+	j = ft_strlen(s1) - 1;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		++i;
+	while (s1[j] && ft_strchr(set, s1[j]))
+		--j;
+	result = ft_substr(s1, i, j - i + 1);
+		if (!result)
+		{
+			return (ft_strdup(""));
+		}
+	return (result);
 }
 
-/* int	main(void)
+int	main(void)
 {
-	char	s1[50] = "2era 1   21uma ve1z";
-	printf("%s\n", ft_strtrim(s1, ""));
-} */
+	char	s1[50] = "abccba";
+	printf("%s\n", ft_strtrim(s1, "abc"));
+}

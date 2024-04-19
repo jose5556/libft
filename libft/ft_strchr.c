@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:32:08 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/17 19:35:24 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 14:16:59 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == c)
-			return ((char *)s) + i;
+			return (((char *)s) + i);
 		i++;
 	}
 	if ((char)c == '\0')
@@ -34,7 +34,7 @@ char	*ft_strchr(const char *s, int c)
 
 /* int	main(void)
 {
-	char	s[] = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
-	printf("%s\n", ft_strchr(s, '\0'));
-	printf("%s\n", strchr(s, '\0'));
+	char	s[] = "    eraumavez";
+	printf("%s\n", ft_strchr(s, ' '));
+	printf("%s\n", strchr(s, ' '));
 } */

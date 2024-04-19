@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:31:05 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/17 18:50:12 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 14:15:59 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	else
 	{
 		while (n--)
-
 			((char *)dest)[n] = ((char *)src)[n];
 	}
 	return (dest);

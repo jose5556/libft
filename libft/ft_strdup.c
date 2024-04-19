@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:32:27 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/17 19:09:45 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/19 14:18:20 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	int		len;
 
 	len = ft_strlen(s);
-	new_string = (char *) malloc(len* (sizeof(char)) + 1);
+	new_string = (char *) malloc (len * (sizeof(char)) + 1);
 	if (new_string == NULL)
 		return (new_string);
 	ft_strlcpy(new_string, s, len + 1);

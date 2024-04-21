@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 22:08:06 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/21 16:25:57 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/21 16:44:48 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstnew(void *content)
 	return (new_node);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	t_list	*list;
 	char		*str;
@@ -32,4 +32,4 @@ int	main(void)
 	str = "ola";
 	list = ft_lstnew(str);
 	printf("%s", (char *)list->content);
-}
+} */

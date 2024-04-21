@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:21:10 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/21 20:13:52 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/21 20:16:46 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst);	
+	del(lst);
+	free(lst);
 }

@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 22:08:06 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/21 16:44:48 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/21 18:00:34 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ t_list	*ft_lstnew(void *content)
 /* int	main(void)
 {
 	t_list	*list;
-	char		*str;
 
-	str = "ola";
-	list = ft_lstnew(str);
+	list = ft_lstnew("era uma vez");
 	printf("%s", (char *)list->content);
 } */

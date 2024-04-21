@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:11:02 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 14:37:18 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/21 19:15:56 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,16 +78,12 @@ static int	count_words(char const *s, char c)
 	return (j);
 }
 
-/* int	main(void)
+int	main(void)
 {
  	char **str;
  	int	i;
 
  	i = 0;
  	str = ft_split("hello !", ' ');
- 	while (str[i])
- 	{
- 		printf("%s", str[i]);
- 		i++;
- 	}
-}*/
+ 	
+}

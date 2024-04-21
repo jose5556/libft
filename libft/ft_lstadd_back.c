@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 16:37:39 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/21 18:26:45 by joseoliv         ###   ########.fr       */
+/*   Created: 2024/04/21 18:27:34 by joseoliv          #+#    #+#             */
+/*   Updated: 2024/04/21 18:27:55 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-    if (!lst)
-        return (NULL);
-    while (lst->next)
-        lst = lst->next;
-    return (lst);
+    
 }
-
-/* int main(void)
-{
-    t_list	*list;
-    t_list  *result;
-	
-	list = ft_lstnew("era");
-	list->next = ft_lstnew("uma");
-	list->next->next = ft_lstnew("vez");
-
-    result = ft_lstlast(list);
-    printf("%s", (char *)result->content);
-} */

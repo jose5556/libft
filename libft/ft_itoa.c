@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 17:11:52 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/19 18:30:42 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/21 15:43:12 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,15 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		n *= -1;
-		len++;
-		len += count_num(n); // = 6
-		result = (char *) ft_calloc((len + 1) , sizeof(char));
+		len += count_num(n) + 1;
+		result = (char *) malloc((len + 1) * sizeof(char));
 		if (!result)
 			return (result);
-		result[0] = '-';
 		result = fill_str_ng(n, len - 1, result);
 	}
 	else
 	{
-		len = count_num(n); // = 7
+		len = count_num(n);
 		result = (char *) malloc((len + 1) * sizeof(char));
 		if (!result)
 			return (result);
@@ -64,7 +62,7 @@ static int	count_num(int n)
 
 static char	*fill_str_ps(int n, int len, char *result)
 {
-	len--; // = 6
+	len--;
 	while (len >= 0)
 	{
 		result[len] = (n % 10) + 48;
@@ -82,6 +80,7 @@ static char	*fill_str_ng(int n, int len, char *result)
 		n /= 10;
 		len--;
 	}
+	result[0] = '-';
 	return (result);
 }
 /*

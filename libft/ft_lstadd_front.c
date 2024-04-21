@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 22:58:13 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/21 15:12:46 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/21 15:15:24 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst)
-		return (*lst = new);
+	{
+		*lst = new;
+		return ;
+	}
 	new->next = *lst;
 	*lst = new;
 }

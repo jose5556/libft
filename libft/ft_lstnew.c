@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 22:08:06 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/20 22:52:25 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/21 15:19:49 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list  *ft_lstnew(void *content)
 {
-	t_list    new_node;
+	t_list	*new_node;
 
-	new_node = malloc(t_list);
+	new_node = (t_list *) malloc(sizeof(t_list));
 	if (!new_node)
 		return (NULL);
 	new_node->content = content;

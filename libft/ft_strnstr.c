@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:38:22 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/21 19:16:49 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:26:03 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,22 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
 
-	i = 0;
-	j = 0;
-	if (ft_strlen(little) == 0)
-		return (((char *)big));
-	while (big[i] && len > 0)
+	i = ft_strlen(little);
+	if (!*little)
+		return ((char *)big);
+	while (*big && len > 0)
 	{
-		while (big[i] && big[i] == little[j])
-		{
-			if (little[j + 1] == '\0')
-				return (((char *)big));
-			i++;
-			j++;
-			if (--len == 0)
-				return (NULL);
-		}
-		i = 0;
-		j = 0;
-		len--;
+		if (!(ft_strncmp(big, little, i)) && len >= i)
+			return ((char *)big);
 		big++;
+		len--;
 	}
 	return (NULL);
 }
 
 /* int	main(void)
 {
-	ft_strnstr("abcd", "xx", 6);
+	printf("%s", ft_strnstr("dfgdfgabcddddd", "abcd", 13));
 } */

@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:27:34 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/22 15:09:30 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/22 15:55:20 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,25 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (!ft_lstlast(*lst))
-		*lst = ft_lstnew(new);
+	t_list	*temporary;
+
+	if (!(*lst))
+		*lst = new;
 	else
 	{
-		ft_lstlast(*lst)->next = ft_lstnew(new);
+		temporary = ft_lstlast(*lst);
+		temporary->next = new;
 	}
 }
 
 /* int	main(void)
 {
 	t_list	*list;
+	t_list	*result;
 
-	list = ft_lstnew("era");
+	list = NULL;
+	//list = ft_lstnew("era");
 	ft_lstadd_back(&list, ft_lstnew("new"));
-	
-	printf("%s", (char *)ft_lstlast(list));
+	result = ft_lstlast(list);
+	printf("%s", (char *)result->content);
 } */

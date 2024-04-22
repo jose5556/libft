@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:22:17 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/22 18:19:03 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/22 20:08:14 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = temporary;
 	}
 }
+
 /*
 void	delete(void *c)
 {

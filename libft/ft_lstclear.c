@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:22:17 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/22 17:40:09 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:19:03 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list  *temporary;
+	t_list	*temporary;
 
 	if (!(*lst))
 		return ;
@@ -25,7 +25,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = temporary;
 	}
 }
-
+/*
 void	delete(void *c)
 {
 	char *s;
@@ -34,7 +34,7 @@ void	delete(void *c)
 	free(s);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	t_list	*list;
 	t_list  *result;

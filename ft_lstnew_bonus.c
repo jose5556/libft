@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/14 16:31:05 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/24 15:03:05 by joseoliv         ###   ########.fr       */
+/*   Created: 2024/04/20 22:08:06 by joseoliv          #+#    #+#             */
+/*   Updated: 2024/04/21 18:00:34 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned char	*dest1;
-	unsigned char	*src1;
+	t_list	*new_node;
 
-	dest1 = (unsigned char *)dest;
-	src1 = (unsigned char *)src;
-	if (!dest1 && !src1)
+	new_node = (t_list *) malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	if (dest < src)
-	{
-		return (ft_memcpy(dest1, src1, n));
-	}
-	else
-	{
-		while (n--)
-			((char *)dest1)[n] = ((char *)src1)[n];
-	}
-	return (dest1);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
 
 /* int	main(void)
 {
-    char    dest[] = "eraumavez";
+	t_list	*list;
 
-    ft_memmove(dest, dest + 2, 9);
-	//memmove(dest, dest + 2, 9);
-    printf("%s\n", dest);
+	list = ft_lstnew("era uma vez");
+	printf("%s", (char *)list->content);
 } */

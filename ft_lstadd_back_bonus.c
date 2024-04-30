@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 18:27:34 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/04/24 15:45:30 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/04/26 22:27:04 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	ft_lstadd_back(&list, ft_lstnew("new"));
 	result = ft_lstlast(list);
 	printf("%s", (char *)result->content);
-} */
+}
+ */

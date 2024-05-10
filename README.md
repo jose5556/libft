@@ -9,7 +9,7 @@ Overview
 ##
 
 
-In this project, I have implemented various functions commonly found in the standard C library (<string.h>, <stdlib.h>, etc.) from scratch. These functions include string manipulation functions, memory allocation functions, and others.
+In this project, I have implemented various functions commonly found in the standard C library (<string.h>, <stdlib.h>, etc.) from scratch. These functions include string manipulation, memory allocation and others.
 
 For more detailed information, please refer to the subject file located alongside the other project files.
 

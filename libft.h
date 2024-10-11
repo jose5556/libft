@@ -6,12 +6,20 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:57:20 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/10/11 02:48:56 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/10/11 03:39:25 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# ifndef FD_MAX
+#  define FD_MAX 1024
+# endif
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -36,7 +44,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-int		ft_atoi(const char *nptr);
+int		ft_atoi_int(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -51,5 +59,11 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 int		ft_pow(int nb, int power);
+char	*ft_strjoin_special(char *s1, char *s2);
+char	*ft_strjoin_free_special(char *s1, char *s2);
+char	*filter_buffer(char *buffer);
+char	*read_line(int fd, char *buffer);
+char	*handle_next(char *buffer);
+char	*get_next_line(int fd);
 
 #endif

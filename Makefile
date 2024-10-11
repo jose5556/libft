@@ -6,7 +6,7 @@
 #    By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 20:20:52 by joseoliv          #+#    #+#              #
-#    Updated: 2024/10/11 03:34:03 by joseoliv         ###   ########.fr        #
+#    Updated: 2024/10/11 03:53:31 by joseoliv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,12 @@ char/ft_isalpha.c char/ft_isdigit.c char/ft_isalnum.c char/ft_isascii.c char/ft_
 #char directiory
 #-------------------------------------------------------------------------------------------------------------------------------------------------#
 
+get_next_line/get_next_line_utils.c get_next_line/get_next_line.c
+#get_next_line directory
+#-------------------------------------------------------------------------------------------------------------------------------------------------#
+
 input_output/ft_putchar_fd.c input_output/ft_putendl_fd.c input_output/ft_putnbr_fd.c input_output/ft_putstr_fd.c
+input_output/ft_printf/ft_printf.c input_output/ft_printf/write_funcs.c input_output/ft_printf/nbr_funcs.c
 #input_output directoty
 #-------------------------------------------------------------------------------------------------------------------------------------------------#
 

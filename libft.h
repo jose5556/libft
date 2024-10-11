@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:57:20 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/10/11 03:41:54 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/10/11 03:49:06 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -65,5 +66,14 @@ char	*filter_buffer(char *buffer);
 char	*read_line(int fd, char *buffer);
 char	*handle_next(char *buffer);
 char	*get_next_line(int fd);
+int		ft_printf(char const *str, ...);
+int		ft_putnbr_hexa(unsigned long long n, char upper);
+int		ft_putchar(char c);
+int		ft_putnbr(int n);
+int		ft_putstr(char *s);
+int		count(long long n, int base);
+int		ft_putptr_hexa(unsigned long long n);
+int		ft_unsigned_putnbr(unsigned int n);
+int		count_unsigned(unsigned long long n);
 
 #endif

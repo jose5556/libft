@@ -6,7 +6,7 @@
 #    By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 20:20:52 by joseoliv          #+#    #+#              #
-#    Updated: 2024/10/11 04:10:25 by joseoliv         ###   ########.fr        #
+#    Updated: 2024/10/11 04:10:51 by joseoliv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ NAME = libft.a
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 
-# Directories and sources
 SRC_DIR = char get_next_line input_output input_output/ft_printf memory string utility
 SRC = \
 	char/ft_isalpha.c char/ft_isdigit.c char/ft_isalnum.c char/ft_isascii.c char/ft_isprint.c char/ft_tolower.c char/ft_toupper.c \

@@ -6,7 +6,7 @@
 #    By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 20:20:52 by joseoliv          #+#    #+#              #
-#    Updated: 2024/10/11 04:10:51 by joseoliv         ###   ########.fr        #
+#    Updated: 2024/10/11 05:15:53 by joseoliv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ NAME = libft.a
 CC = cc
 FLAGS = -Wall -Wextra -Werror
 
-SRC_DIR = char get_next_line input_output input_output/ft_printf memory string utility
 SRC = \
 	char/ft_isalpha.c char/ft_isdigit.c char/ft_isalnum.c char/ft_isascii.c char/ft_isprint.c char/ft_tolower.c char/ft_toupper.c \
 	get_next_line/get_next_line_utils.c get_next_line/get_next_line.c \
@@ -25,6 +24,7 @@ SRC = \
 	string/ft_split.c string/ft_strchr.c string/ft_strdup.c string/ft_striteri.c string/ft_strjoin.c string/ft_strlcat.c string/ft_strlcpy.c \
 	string/ft_strlen.c string/ft_strmapi.c string/ft_strncmp.c string/ft_strnstr.c string/ft_strrchr.c string/ft_strtrim.c string/ft_substr.c \
 	string/ft_strjoin_free.c \
+	lists/ft_lstadd_back.c lists/ft_lstclear.c lists/ft_newlst.c \
 	utility/ft_atoi_int.c utility/ft_itoa.c utility/ft_pow.c utility/ft_atoi_double.c
 
 OBJ = $(SRC:.c=.o)

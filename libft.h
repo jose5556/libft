@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 16:57:20 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/10/11 05:12:19 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/10/12 01:52:24 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ft_lstclear(t_list **lst);
 t_list	*ft_newlst(int content);
 typedef struct s_list
 {
-	int				content;
+	void			*content;
 	struct s_list	*next;
 }	t_list;
 

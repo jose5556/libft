@@ -21,9 +21,9 @@ char	*ft_strjoin_free(char *s1, char *s2, int i)
 	temp = ft_strjoin(s1, s2);
 	if (!temp)
         return (NULL);
-	if (i == 1)
+	if (i == 1 && s1)
 		free(s1);
-	else if (i == 2)
+	else if (i == 2 && s2)
 		free(s2);
 	else
 	{

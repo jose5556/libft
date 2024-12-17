@@ -6,7 +6,7 @@
 /*   By: joseoliv <joseoliv@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 03:33:18 by joseoliv          #+#    #+#             */
-/*   Updated: 2024/12/07 10:38:26 by joseoliv         ###   ########.fr       */
+/*   Updated: 2024/12/17 12:44:50 by joseoliv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ char	*ft_strjoin_free(char *s1, char *s2, int i)
 		free(s2);
 	else
 	{
-		free(s1);
-		free(s2);
+		if (s1)
+			free(s1);
+		if (s2)
+			free(s2);
 	}
 	return (temp);
 }

@@ -11,10 +11,11 @@
 
 # 💡 About the project
 
-This project, represents my own **Libft**, 
-a custom C library created by me that extend the capabilities of the standard C library.
-Libft is a useful library that helped me for many C projects, providing optimized and reusable utility functions. 
-The project is divided into different folders:
+This project **Libft**, 
+a custom C library I created to extend the capabilities of the standard C library.
+It provides optimized and reusable utility functions that have been helpful across multiple C projects.
+
+The project is organized into different folders based on function types:
 
 - **char**
 - **get_next_line**
@@ -25,20 +26,19 @@ The project is divided into different folders:
 
 # 🔍 Overview
 
-Each function is organized inside each correspondent folder.
+Each function is categorized into the appropriate folder:
 
-- **char** -> All functions that receive and handles a single character;
+- **char** -> Functions that operate on a single character (e.g., checking character types).
 
-- **get_next_line** -> Custom function that reads a single line each time its called from a desired file descriptor;
+- **get_next_line** -> Reads a single line at a time from a given file descriptor.
 
-- **input_output** -> Functions like ft_printf (my own implementation of printf)
-and some more with the objective of print the desire input to the desire output;
+- **input_output** -> Functions like `ft_printf` (a custom `printf` implementation) and others that handle input/output
 
-- **memory** -> A collection of functions that handles memory, such as ft_calloc or ft_memset;
+- **memory** -> A collection of functions for memory management, such as `ft_calloc` and `ft_memset`.
 
-- **string** -> Functions with the porpuse of do a desirable behavior to a string;
+- **string** -> Functions that manipulate strings, such as concatenation, duplication, and length calculation.
 
-- **utility** -> Some extra function like ft_atoi or ft_itoa that, for now, doesnt have a folder specifically for itself;
+- **utility** -> Miscellaneous helper functions like `ft_atoi` and `ft_itoa`, which don’t fit into the other categories.
 
 # 🛠️ Usage
 
@@ -85,9 +85,9 @@ int main()
 # 📌 Note
 
 - **get_next_line** function requires BUFFER_SIZE to be defined at compilation.
-If unsure, the default define of the value is 42 and you dont need to modify anythig.
+If unsure, the default value is 42, and no modifications are needed.
 
-- **ft_printf** supports various format specifiers, similar to the standard printf, however it isnt fully complete, so it only
-accepts, for now, %c, %s, %p, %d, %i, %u, &x, %X and %%.
+- **ft_printf** supports various format specifiers, similar to the standard printf, but it is not fully complete.
+Currently supported specifiers: %c, %s, %p, %d, %i, %u, %x, %X, and %%.
 
-Feel free to explore the libft.h, and use this library as much as you want.
+Feel free to explore libft.h and use this library as much as you want!
